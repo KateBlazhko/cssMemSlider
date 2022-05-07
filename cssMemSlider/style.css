@@ -15,17 +15,12 @@ body {
 }
 
 input {
-  order: 3;
-  flex-grow: 1;
-  justify-self: flex-end;
-
-  cursor: pointer;
+  display: none;
 }
 
 /* Images */
 
 .slider__images {
-  order: 1;
   overflow: hidden;
 
   width: 100%;
@@ -82,7 +77,6 @@ input {
 /* Text */
 
 .slider__text {
-  order: 2;
   overflow: hidden;
   position: relative;
 
@@ -116,5 +110,21 @@ input {
 
 .slider__content #input_4:checked ~ .slider__text .text_wrapper { 
   transform: translate(-300%); 
+}
+
+/* Navigation */
+.slider__navigation {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  width: 30%;
+}
+
+.slider__navigation label {
+  display: block;
+
+  font-size: 3rem;
+
+  background-color: bisque;
 }
 
