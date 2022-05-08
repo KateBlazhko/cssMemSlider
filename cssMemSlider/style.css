@@ -1,5 +1,12 @@
-body {
+html {
   font-size: 10px;
+}
+
+body {
+  --text-color: #f6590b;
+  --toggle-color: #ffaf86;
+
+  --toggle-check-color: #ffffff;
 }
 
 .slider {
@@ -11,7 +18,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  row-gap: 50px;
+  row-gap: 5rem;
 }
 
 input {
@@ -82,7 +89,8 @@ input {
 
   width: 70%;
 
-  font-size: 3rem;
+  font-size: 5rem;
+  color: var(--text-color)
 }
 
 .text_wrapper {
@@ -116,15 +124,66 @@ input {
 .slider__navigation {
   display: flex;
   justify-content: end;
-  gap: 5px;
+
   width: 30%;
 }
 
-.slider__navigation label {
-  display: block;
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  font-size: 3rem;
+  width: 7rem;
+  height: 7rem;
 
-  background-color: bisque;
+  cursor: pointer;
 }
+
+label:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 7rem;
+  height: 7rem;
+
+  cursor: pointer;
+}
+
+label:hover .label__inner {
+  border: 5px solid var(--text-color);
+
+  background-color: var(--text-color);
+}
+
+label:active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 7rem;
+  height: 7rem;
+
+  cursor: url('./assets/img/hand-pointer.svg') 0 0, pointer;
+}
+
+
+.label__inner {
+  width: 3rem;
+  height: 3rem;
+  border-radius: calc((3rem + 0.5rem * 2) / 2);
+  border: 0.5rem solid var(--toggle-color);
+
+  background-color: var(--toggle-color);
+}
+
+.slider__content #input_1:checked ~ .slider__navigation .label_1 .label__inner,
+.slider__content #input_2:checked ~ .slider__navigation .label_2 .label__inner,
+.slider__content #input_3:checked ~ .slider__navigation .label_3 .label__inner,
+.slider__content #input_4:checked ~ .slider__navigation .label_4 .label__inner { 
+  border: 5px solid var(--text-color);
+
+  background-color: var(--toggle-check-color);
+}
+
 
