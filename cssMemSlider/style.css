@@ -14,11 +14,23 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .slider {
+    max-width: 70%;
+  }
+}
+
 .slider__content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  row-gap: 5rem;
+  row-gap: 3em;
+}
+
+@media (max-width: 767px) {
+  .slider__content {
+    row-gap: 1em;
+  }
 }
 
 input {
@@ -47,6 +59,9 @@ input {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+@media (max-width: 767px) {
 }
 
 .slide_1 {
@@ -89,8 +104,18 @@ input {
 
   width: 70%;
 
-  font-size: 5rem;
+  font-size: 2em;
   color: var(--text-color)
+}
+
+@media (max-width: 767px) {
+  .slider__text {
+    order: 3;
+
+    width: 100%;
+
+    text-align: center;
+  }
 }
 
 .text_wrapper {
@@ -128,27 +153,26 @@ input {
   width: 30%;
 }
 
+@media (max-width: 767px) {
+  .slider__navigation {
+    order: 2;
+    justify-content: center;
+
+    width: 100%;
+  }
+}
+
 label {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 7rem;
-  height: 7rem;
+  width: 5em;
+  height: 5em;
 
   cursor: pointer;
 }
 
-label:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 7rem;
-  height: 7rem;
-
-  cursor: pointer;
-}
 
 label:hover .label__inner {
   border: 5px solid var(--text-color);
@@ -157,22 +181,15 @@ label:hover .label__inner {
 }
 
 label:active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 7rem;
-  height: 7rem;
-
-  cursor: url('./assets/img/hand-pointer.svg') 0 0, pointer;
+  transform: scale(1.3);
 }
 
 
 .label__inner {
-  width: 3rem;
-  height: 3rem;
-  border-radius: calc((3rem + 0.5rem * 2) / 2);
-  border: 0.5rem solid var(--toggle-color);
+  width: 1em;
+  height: 1em;
+  border-radius: calc((1em + 0.5em * 2) / 2);
+  border: 0.5em solid var(--toggle-color);
 
   background-color: var(--toggle-color);
 }
@@ -185,5 +202,3 @@ label:active {
 
   background-color: var(--toggle-check-color);
 }
-
-
