@@ -68,16 +68,12 @@ input {
   padding-bottom: 70%;  
 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-color: var(--toggle-color);
 }
 
-@media (max-width: 425px) {
-}
-
 .slide_1 {
-  background-size: cover;
   background-image: url(./assets/img/1.jpg);
 }
 
