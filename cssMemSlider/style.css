@@ -7,14 +7,23 @@ body {
   --toggle-color: #ffaf86;
 
   --toggle-check-color: #ffffff;
+
+  margin: 0;
 }
 
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+
 .slider {
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .slider {
     max-width: 70%;
   }
@@ -27,7 +36,7 @@ body {
   row-gap: 3em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .slider__content {
     row-gap: 1em;
   }
@@ -43,6 +52,8 @@ input {
   overflow: hidden;
 
   width: 100%;
+  border-radius: 20px;
+
 }
 
 .slides_wrapper {
@@ -54,17 +65,19 @@ input {
 .slide {
   flex-shrink: 0;
   width: 100%;
-  padding-bottom: 75%;  
+  padding-bottom: 70%;  
 
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-color: var(--toggle-color);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 425px) {
 }
 
 .slide_1 {
+  background-size: cover;
   background-image: url(./assets/img/1.jpg);
 }
 
@@ -102,13 +115,13 @@ input {
   overflow: hidden;
   position: relative;
 
-  width: 70%;
+  width: 60%;
 
   font-size: 2em;
   color: var(--text-color)
 }
 
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .slider__text {
     order: 3;
 
@@ -150,10 +163,10 @@ input {
   display: flex;
   justify-content: end;
 
-  width: 30%;
+  width: 40%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .slider__navigation {
     order: 2;
     justify-content: center;
@@ -175,7 +188,7 @@ label {
 
 
 label:hover .label__inner {
-  border: 5px solid var(--text-color);
+  border: 0.5em solid var(--text-color);
 
   background-color: var(--text-color);
 }
