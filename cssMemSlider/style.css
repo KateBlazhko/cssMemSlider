@@ -122,8 +122,6 @@ input {
     order: 3;
 
     width: 100%;
-
-    text-align: center;
   }
 }
 
@@ -193,7 +191,6 @@ label:active {
   transform: scale(1.3);
 }
 
-
 .label__inner {
   width: 1em;
   height: 1em;
@@ -207,7 +204,17 @@ label:active {
 .slider__content #input_2:checked ~ .slider__navigation .label_2 .label__inner,
 .slider__content #input_3:checked ~ .slider__navigation .label_3 .label__inner,
 .slider__content #input_4:checked ~ .slider__navigation .label_4 .label__inner { 
+  border: 5px solid var(--toggle-color);
+
+  background-color: var(--toggle-check-color);
+}
+
+.slider__content #input_1:checked ~ .slider__navigation .label_1:hover .label__inner,
+.slider__content #input_2:checked ~ .slider__navigation .label_2:hover .label__inner,
+.slider__content #input_3:checked ~ .slider__navigation .label_3:hover .label__inner,
+.slider__content #input_4:checked ~ .slider__navigation .label_4:hover .label__inner { 
   border: 5px solid var(--text-color);
 
   background-color: var(--toggle-check-color);
 }
+
