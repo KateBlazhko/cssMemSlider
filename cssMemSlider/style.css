@@ -52,7 +52,7 @@ input {
   overflow: hidden;
 
   width: 100%;
-  border-radius: 20px;
+  border-radius: 2em;
 
 }
 
@@ -204,7 +204,7 @@ label:active {
 .slider__content #input_2:checked ~ .slider__navigation .label_2 .label__inner,
 .slider__content #input_3:checked ~ .slider__navigation .label_3 .label__inner,
 .slider__content #input_4:checked ~ .slider__navigation .label_4 .label__inner { 
-  border: 5px solid var(--toggle-color);
+  border: 0.5em solid var(--toggle-color);
 
   background-color: var(--toggle-check-color);
 }
@@ -213,7 +213,7 @@ label:active {
 .slider__content #input_2:checked ~ .slider__navigation .label_2:hover .label__inner,
 .slider__content #input_3:checked ~ .slider__navigation .label_3:hover .label__inner,
 .slider__content #input_4:checked ~ .slider__navigation .label_4:hover .label__inner { 
-  border: 5px solid var(--text-color);
+  border: 0.5em solid var(--text-color);
 
   background-color: var(--toggle-check-color);
 }
